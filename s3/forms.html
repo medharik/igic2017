@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>les formulaires</title>
+	<meta charset="utf-8">
+	<style>
+		label{
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+
+
+<form>
+<table 	align="center">
+	<tr>
+		<td>Email (*) :</td>
+		<td><input type="email" required=""></td>
+	</tr>
+	<tr>
+		<td>tél</td>
+		<td><input type="tel" name=""></td>
+	</tr>
+	<tr>
+		<td>Age</td>
+		<td><input type="number" min="10" name="" max="100"></td>
+	</tr>
+	<tr>
+		<td>Site web</td>
+		<td><input type="url" name=""></td>
+	</tr>
+	<tr>
+		<td>Recherche</td>
+		<td><input type="search" name=""></td>
+	</tr>
+	<tr>
+		<td>Mot de passe (*) :</td>
+		<td><input type="password" name="" required=""></td>
+	</tr>
+
+	<tr>
+		<td><label for="h">Homme</label> <input type="radio" 
+		name="hf" value="homme"  id="h"></td>
+		<td><label for="f">Femme</label> 
+		<input type="radio" 
+		name="hf" id="f" value="femme"></td>
+	</tr>
+
+<tr>
+	<td>Diplomé <input type="checkbox"  value="dip"></td>
+	<td>Chomeur <input type="checkbox" value="chom"></td>
+</tr>
+<tr>
+	<td>Adresse :</td>
+	<td><textarea name="adresse" id="ad" 
+	cols="30" rows="10"></textarea></td>
+</tr>
+<tr>
+	<td>Ville :</td>
+
+	<td> 
+
+	<select name="" id="">
+		<option value="">ville1</option>
+		<option value="">ville2</option>
+		<option value="">ville3</option>
+	</select></td>
+</tr>
+	<tr>
+	<td></td>
+		<td >
+		<input type="reset" value="annuler">
+			<input type="submit" value="Connexion">
+		</td>
+		
+	</tr>
+
+</table>
+
+</form>
+
+
+</body>
+</html>
