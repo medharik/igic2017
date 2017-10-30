@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>les tableaux et formulaires</title>
+	<style>
+		thead{
+			background: #EEE;
+		}
+		tfoot{
+			color: white;
+			background: black;
+		}
+		tbody tr:nth-child(2n){
+			background: pink;
+		}
+
+	</style>
+</head>
+<body>
+<h2>les tableaux table>tr(table row)>td (table data) ou th (table head)</h2>
+
+<table border="1" align="center" width="300">
+	<caption>nos tarifs</caption>
+	<thead>
+	<tr>
+		<th >produits</th>
+		<th>prix</th>
+	</tr>
+</thead>
+<tfoot>
+<tr><td>total</td><td>13500 dhs</td></tr></tfoot>
+<tbody>
+<tr>
+	<th>hp dv 5</th>
+	<td>6500</td>
+</tr><tr>
+	<th>hp dv 5</th>
+	<td>6500</td>
+</tr><tr>
+	<th>hp dv 5</th>
+	<td>6500</td>
+</tr><tr>
+	<th>hp dv 5</th>
+	<td>6500</td>
+</tr><tr>
+	<th>hp dv 5</th>
+	<td>6500</td>
+</tr>
+<tr>
+	<th>dell c7</th>
+<td>7000</td>
+</tr>
+
+</tbody>
+
+</table>
+<hr>
+<!-- table>tr*3>td*2 -->
+<table border="1" width="500" align="center">
+	<tr>
+		<td>produits</td>
+		<td>prix</td>
+	</tr>
+	<tr>
+		<td>Hp</td>
+		<td>9000</td>
+	</tr>
+	<tr>
+		<td>sony</td>
+		<td>10000</td>
+	</tr>
+</table>
+</body>
+</html>
