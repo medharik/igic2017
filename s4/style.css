@@ -1,0 +1,38 @@
+/* Css : cascading style sheets => feuilles de style en cascade */
+/* Rôle=> définir la présentation graphique des pages web */ 
+/*  les selecteurs : les balises */
+*{ /* toutes les balises html */
+	font-family:sans-serif ;
+}
+h2{
+text-align: center;
+color: #1B39DB; /* couleur du texte */
+text-transform: uppercase;/*  ou lowercase ou Capitalize */
+}
+th{
+	background: none;
+	text-align: right;
+}
+
+label{
+	color: #E3009F;
+}
+input,textarea,select{
+	background: #39BF00;
+	color: white;
+	width: 100%;
+}
+table{
+	background: #DBFBCE;
+}
+/* les pseudo classes  */
+input[type="submit"]{
+	background: red;
+	padding: 10px;
+	font-size: 20px;
+}
+h2:first-letter{
+	color: red;
+	background: black;
+	font-size: 2em;
+}

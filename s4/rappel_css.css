@@ -1,0 +1,16 @@
+*{
+	font-family: sans-serif;
+}
+label{
+	color: blue;
+}
+input{
+	background: green;
+	color: white;
+}
+table{
+	background: purple;
+}
+table td:nth-child(odd){
+
+}

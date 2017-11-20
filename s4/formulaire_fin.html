@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>les formualaires</title>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+	<h2>les formulaires : révision </h2>
+	<!-- form>table>tr*12>((th>label)+(td>input)) ctrl + shift + / -->
+	<form action="">
+		<table align="center">
+			<tr>
+				<th><label for="email">Email (*) :</label></th>
+				<td><input type="email" id="email" name="email" required=""></td>
+			</tr>
+			<tr>
+				<th><label for="tel">Tél:</label></th>
+				<td><input type="tel" name="tel" id="tel"></td>
+			</tr>
+			<tr>
+				<th><label for="passe">Mot de passe</label></th>
+				<td><input type="password" id="passe" name="passe"></td>
+			</tr>
+			<tr>
+				<th><label for="homme">Homme  :</label></th>
+				<td><input type="radio" name="hf" id="homme" value="homme"></td>
+				
+			</tr>
+			<tr>
+				<th><label for="femme">Femme  :</label></th>
+				<td><input type="radio" name="hf" id="femme" value="femme"></td>
+			</tr>
+			<tr>
+				<th><label for="np">Nom & Prénom</label></th>
+				<td><input type="text" id="np" name="np"></td>
+			</tr>
+			<tr>
+				<th><label for="adresse">Adresse :</label></th>
+				<td><textarea name="adresse" id="adresse" cols="30" rows="10"></textarea></td>
+			</tr>
+			<tr>
+				<th><label for="">Ville </label></th>
+				<td><!-- select>option{ville $} -->
+					<select name="ville[]" id="ville" size="3" multiple>
+						<option value="casa">casablanca</option>
+						<option value="rabat">rabat</option>
+						<option value="El jadida">El jadida</option>
+						<option value="tanger">tanger</option>
+					</select>
+
+				</td>
+			</tr>
+			<tr>
+				<th><label for="ville2">Ville  auto completé</label></th>
+				<td><!-- select>option{ville $} -->
+					<input type="text" name="ville2" id="ville2" list="listville">
+<datalist id="listville">
+						<option value="casa">casablanca</option>
+						<option value="rabat">rabat</option>
+						<option value="El jadida">El jadida</option>
+						<option value="tanger">tanger</option>
+</datalist>
+					</select>
+
+				</td>
+			</tr>
+			<tr>
+				<th><label for="nf">Nombre d'enfant</label></th>
+				<td><input type="number" name="nf" id="nf" min="2" max="10"></td>
+			</tr>
+			<tr>
+				<th><label for="date">Date de naissance : </label></th>
+				<td><input type="date" id="date" name="date"></td>
+			</tr>
+			<tr>
+				<th><label for="couleur">Couleur </label></th>
+				<td><input type="color" id="couleur" name="couleur"></td>
+			</tr>
+			<tr>
+				<th><label for="heure">heure/min</label></th>
+				<td><input type="time" name="heure" id="heure"></td>
+			</tr>
+					<tr>
+				<th><label for="dip">diplomé</label></th>
+				<td><input type="checkbox" name="site" id="dip" value="diplome"></td>
+				<th><label for="cho">chomeur</label></th>
+				<td><input type="checkbox" name="cho" id="cho" value="chomeur"></td>
+			</tr>
+					<tr>
+				<th><label for="interval">Nombre d'année d'expérience</label></th>
+				<td>0<input type="range" name="exp" id="exp" value="2" min="0" max="10" step="1" >10</td>
+			</tr>
+
+			<tr>
+				<td></td>
+				<td><input type="submit" name="ok" id="ok" value="valider"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
