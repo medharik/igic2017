@@ -21,11 +21,8 @@
 	text-align: center;
 }
 
-#logo img{
-	height: 90%;
-} 
-#menu{
-	height: 60px;
+#logo img{	height: 90%;} 
+#menu{	height: 60px;
 	width: 800px;
 	background:red;
 	float: right;
