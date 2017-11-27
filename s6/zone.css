@@ -1,0 +1,45 @@
+*{
+	margin: 0;padding: 0; /* remise à zéro des marges internes et externes */
+}
+#haut{
+	height: 60px;
+	background: #506419;
+}
+#milieu{
+	height: 500px;
+	background: url('back.png') no-repeat center;
+	background-size: cover;
+}
+
+#bas{
+	height: 200px;
+}
+#logo{
+	height: 60px;
+	width: 200px;
+	float: left;
+	text-align: center;
+}
+
+#logo img{
+	height: 90%;
+} 
+#menu{
+	height: 60px;
+	width: 800px;
+	background:red;
+	float: right;
+}
+
+.b{
+	border: 1px solid black;
+	box-sizing: border-box;
+}
+.l{
+	width: 100%;
+}
+.e{
+	width: 25%;
+	height: 200px;
+	float: left;
+}
