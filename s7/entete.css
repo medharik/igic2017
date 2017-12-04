@@ -1,0 +1,75 @@
+*{
+	margin: 0;padding: 0;
+	font-family: sans-serif;
+}
+#header{
+	width: 100%;
+	height: 60px;
+	background: grey;
+}
+#logo{
+	width: 200px;
+	height: 60px;
+	float: left;
+}
+#logo img{
+	height: 50px;
+}
+#menu{
+	width: 550px;
+	height: 60px;
+	float: right;
+	background: grey;
+}
+
+#menu a{
+	color: red;
+	text-decoration: none;
+display: inline-block;
+height: 60px;
+line-height: 60px;
+padding-left: 10px;
+padding-right: 10px;
+
+}
+
+#menu a:hover{
+background: black;
+color: white;
+}
+
+.b{
+	border: 1px solid black;
+	box-sizing: border-box;
+}
+#milieu{
+	width: 100%;
+	height: 600px;
+	background: #CCC;
+	text-align: center;
+}
+#milieu img{
+	height: 100%;
+}
+#pied{
+	height: 400px;
+	width: 100%;
+}
+.produit{
+	width: 50%;
+	height: 400px;
+	background: green;
+	display: inline-block;
+}
+.tof{
+	width: 400px;
+	height: 300px;
+	margin: auto;
+}
+.titre{
+	height: 50px;
+	width: 400px;
+	text-align: center;
+	margin: auto;
+}
+.
