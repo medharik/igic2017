@@ -1,0 +1,28 @@
+.zone{
+	border: 1px solid black;
+	width: 200px;
+	height: 200px;
+	position: absolute;
+
+}
+.rouge {
+	background: red;
+	right: 100px;
+	bottom: 0;
+}
+.vert{
+	position: fixed;
+	background: green;
+	left: 0;
+	top: 0;
+	z-index: 2;
+}
+.bleu{
+	background: blue;
+	left: 100px;
+	top: 100px;
+	
+}
+.full{
+	width: 100%;
+}
