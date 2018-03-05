@@ -27,6 +27,7 @@ $data=get_all();
 		<td>
 <a href="delete.php?id=<?php echo $ligne['id'] ?>">Supprimer</a>
 <a href="show.php?id=<?php echo $ligne['id'] ?>">Consulter</a>
+<a href="edit.php?id=<?php echo $ligne['id'] ?>">Modifier</a>
 
 		</td>
 		</tr>
