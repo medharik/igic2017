@@ -50,7 +50,19 @@ $data=	$rp->fetchAll();
 return $data;
 }
 
-//recuperer un produit spécifique 
+//recuperer un produit spécifique par son id
+//recuperer des produits
+function get_by_id($id)
+{
+	$cnx=	connecter_db();
+	//prepare une requete (SQL)
+$rp=$cnx->prepare("select * from produit where id=?");
+	//executer la requete 
+	$rp->execute(array($id));
+$data=	$rp->fetch();
+return $data;
+}
+
 
 
  ?>

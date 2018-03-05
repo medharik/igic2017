@@ -8,6 +8,9 @@ $data=get_all();
 	<title>liste des produits</title>
 </head>
 <body>
+	<div>
+		<a href="new.php">Nouveau</a>
+	</div>
 <table  border="1" align="center" width="80%" >
 	<tr>
 		<td>id</td>
@@ -21,7 +24,11 @@ $data=get_all();
 		<td><?php echo $ligne['id'] ?></td>
 		<td><?php echo $ligne['libelle'] ?></td>
 		<td><?php echo $ligne['prix'] ?></td>
-		<td><a href="delete.php?id=<?php echo $ligne['id'] ?>">Supprimer</a></td>
+		<td>
+<a href="delete.php?id=<?php echo $ligne['id'] ?>">Supprimer</a>
+<a href="show.php?id=<?php echo $ligne['id'] ?>">Consulter</a>
+
+		</td>
 		</tr>
 	
 	 <?php endforeach ?>
