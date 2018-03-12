@@ -13,6 +13,7 @@ $data=get_all();
 	</div>
 <table  border="1" align="center" width="80%" >
 	<tr>
+		<td>#</td>
 		<td>id</td>
 		<td>libellé</td>
 		<td>prix</td>
@@ -22,6 +23,7 @@ $data=get_all();
 	 <?php foreach ($data as $ligne): ?>
 	 	<tr>
 		<td><?php echo $ligne['id'] ?></td>
+			<td><img src="<?php echo $ligne['photo'] ?>" alt="" width='100'></td>
 		<td><?php echo $ligne['libelle'] ?></td>
 		<td><?php echo $ligne['prix'] ?></td>
 		<td>

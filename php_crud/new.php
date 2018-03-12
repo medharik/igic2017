@@ -6,7 +6,7 @@
 </head>
 <body>
 	
-<form action="create.php" method="post">
+<form action="create.php" method="post" enctype="multipart/form-data">
 <table align="center">
 		<tr>
 <td>Libellé : </td>
@@ -15,6 +15,14 @@
 		<tr>
 			<td>Prix :</td>
 			<td><input type="number" name="prix"></td>
+		</tr>
+			<tr>
+			<td>qauantité en stock :</td>
+			<td><input type="number" name="qtestock"></td>
+		</tr>
+			<tr>
+			<td>Photo : </td>
+			<td><input type="file" name="photo"></td>
 		</tr>
 		<tr>
 			<td></td>

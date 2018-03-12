@@ -2,9 +2,13 @@
 include 'fonctions.php';
 //extraire les infos du form
 extract($_POST);//$libelle,$prix
-ajouter_produit($libelle, $prix);
-//redirection vers index.php
-header("location:index.php");
+$chemin=charger($_FILES['photo']);
+ajouter_produit($libelle, $prix, $qtestock, $chemin);
+header('location:index.php');
+
+
+
+
 
 
  ?>
