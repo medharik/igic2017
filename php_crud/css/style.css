@@ -1,0 +1,8 @@
+.table{
+	background: #C00;
+}
+.table thead td{
+	color: white;
+	font-weight: bold;
+	text-align: center;
+}

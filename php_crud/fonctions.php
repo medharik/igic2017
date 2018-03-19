@@ -64,8 +64,8 @@ return $data;
 }
 
 function charger($infos)
-{$nom=$infos['name'];
-$fichier_temporaire=$infos['tmp_name'];
+{$nom=$infos['name'];//ok
+$fichier_temporaire=$infos['tmp_name'];//ok
 $new_name= sha1( date('Y_m_d_h_i_s')."_".rand(0,9999)).$nom;
 $extension=pathinfo($nom, PATHINFO_EXTENSION);
 $autorises=array('jpg','jpeg','png','gif');
@@ -77,7 +77,7 @@ if($taille > 8000000){
 die("ce fichier est trop volumineux");
 }
 $chemin="images/$new_name";
-move_uploaded_file($fichier_temporaire,$chemin );
+move_uploaded_file($fichier_temporaire,$chemin );//ok
 
 	return $chemin;
 
