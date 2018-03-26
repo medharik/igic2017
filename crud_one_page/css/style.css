@@ -1,0 +1,29 @@
+.table{
+	background: #C00;
+}
+.table thead td{
+	color: white;
+	font-weight: bold;
+	text-align: center;
+}
+.col-md-4{
+	border: 2px solid black;
+}
+.margehaut{
+	margin-top: 80px;
+}
+.navbar-default {
+    background-color: red;
+    border-color: #e7e7e7;
+}
+.navbar-default .navbar-brand {
+    color: #FFF;
+    font-size: 2em;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: #FFF;
+    background-color: #e7e7e7;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #FFFFFF;
+}
