@@ -19,46 +19,86 @@ $cnx=	connecter_db();
 $rp=$cnx->prepare("insert into produit (libelle,prix,qtestock,photo) values (?,?,?,?)");
 	//executer la requete 
 	$rp->execute(array($libelle,$prix,$qtestock,$photo));
-
 }catch(PDOException $e){
  die("erreur ajout de produit ".$e->getMessage());
 }
 }
+function intero($value)
+{
+	return '?';
+}
+//ajout générique
+function ajouter($table,$data)
+{ 
+try{
+$cles=join(',', array_keys($data));//nom,prix
+$valeurs= array_values($data);// array(hp,5000)
+$intero=join(',', array_map("intero",$data));//?,?
+$sql="insert into $table ($cles) values ($intero)";
+//echo "$sql";
+//connexion db
+$cnx=	connecter_db();
+	//prepare une requete (SQL)
+$rp=$cnx->prepare($sql);
+	//executer la requete 
+	$rp->execute($valeurs);
+}catch(PDOException $e){
+ die("erreur ajout de $table ".$e->getMessage());
+}
+}
 
 //supprimer ($id)
-function supprimer_produit($id)
+function supprimer($id,$table)
 { //connexion db
 $cnx=	connecter_db();
 	//prepare une requete (SQL)
-$rp=$cnx->prepare("delete from produit where id=?");
+$rp=$cnx->prepare("delete from $table where id=?");
 	//executer la requete 
 	$rp->execute(array($id));
 }
-
 //modifier (connaitre quel produit à modifier ($id))+ nouveau libelle , $prix
-function modifier_produit($id,$libelle,$prix,$photo,$qtestock)
+
+function set($value){
+return "$value =?";
+}
+function modifier($table,$id,$data)
 { //connexion db
+
+if(empty($data['photo'])){
+$element=get_by_id($id, $table);
+$old_chemin=$element['photo'];
+$data['photo']=$old_chemin;
+}
+	$keys=array_keys($data);//array(nom,prix);
+	$sets=join(',',array_map("set",$keys));//array(nom=?,prix=?);
+$valeurs=array_values($data);
+$valeurs[]=$id;
+$sql="update $table set $sets where id=?";
+echo $sql;
 $cnx=	connecter_db();
 	//prepare une requete (SQL)
-if(!empty($photo)){
-	$rp=$cnx->prepare("update produit set libelle=?, prix=?, photo=?, qtestock=? where id=?");
-	$rp->execute(array($libelle,$prix,$photo,$qtestock,$id));
-
-}
-else {
-	$rp=$cnx->prepare("update produit set libelle=?, prix=?, qtestock=? where id=?");
-	$rp->execute(array($libelle,$prix,$qtestock,$id));
-}
+$rp=$cnx->prepare($sql);
+	$rp->execute($valeurs);
 
 	//executer la requete ,
 }
 
 //recuperer des produits
-function get_all()
+function get_all($table)
 {
 	$cnx=	connecter_db();
 	//prepare une requete (SQL)
-$rp=$cnx->prepare("select * from produit");
+$rp=$cnx->prepare("select * from $table order by id desc");
+	//executer la requete 
+	$rp->execute();
+$data=	$rp->fetchAll();
+return $data;
+}
+function get_by($table, $condition)
+{
+	$cnx=	connecter_db();
+	//prepare une requete (SQL)
+$rp=$cnx->prepare("select * from $table where $condition");
 	//executer la requete 
 	$rp->execute();
 $data=	$rp->fetchAll();
@@ -67,16 +107,17 @@ return $data;
 
 //recuperer un produit spécifique par son id
 //recuperer des produits
-function get_by_id($id)
+function get_by_id($id,$table)
 {
 	$cnx=	connecter_db();
 	//prepare une requete (SQL)
-$rp=$cnx->prepare("select * from produit where id=?");
+$rp=$cnx->prepare("select * from $table where id=?");
 	//executer la requete 
 	$rp->execute(array($id));
 $data=	$rp->fetch();
 return $data;
 }
+
 
 function charger($infos)
 {$nom=$infos['name'];//ok
