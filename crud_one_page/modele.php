@@ -9,20 +9,6 @@ $cnx->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 return $cnx;
 }
 
-//ajout
-function ajouter_produit($libelle,$prix,$qtestock,$photo)
-{ 
-try{
-//connexion db
-$cnx=	connecter_db();
-	//prepare une requete (SQL)
-$rp=$cnx->prepare("insert into produit (libelle,prix,qtestock,photo) values (?,?,?,?)");
-	//executer la requete 
-	$rp->execute(array($libelle,$prix,$qtestock,$photo));
-}catch(PDOException $e){
- die("erreur ajout de produit ".$e->getMessage());
-}
-}
 function intero($value)
 {
 	return '?';
@@ -134,10 +120,6 @@ die("ce fichier est trop volumineux");
 }
 $chemin="images/$new_name";
 move_uploaded_file($fichier_temporaire,$chemin );//ok
-
 	return $chemin;
-
 }
-
-
- ?>
+?>
