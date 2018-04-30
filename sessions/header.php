@@ -1,0 +1,1 @@
+<a href="deconnexion.php" class="btn btn-warning">Déconnexion</a>
